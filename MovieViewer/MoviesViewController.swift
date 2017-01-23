@@ -121,6 +121,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")!
         let myRequest = NSURLRequest(url: url as URL)
         
+        loadingMoreView?.center = self.view.center
+
         
         //Configure session so that completion handler is executed on main UI thread
         let session = URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue:OperationQueue.main
@@ -184,8 +186,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                     // Add the loaded movies to the movies array
                     if let responseDictionary = responseFieldDictionary?["posts"] as? [NSDictionary] {
                         self.movies!.append(contentsOf: responseDictionary)
-                        print("new movies!!!")
-                        print(responseDictionary)
                     }
                 }
             }
@@ -212,6 +212,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                 // Update position of loadingMoreView, and start loading indicator
                 let frame = CGRect(x: 0, y: tableView.contentSize.height, width: tableView.bounds.size.width, height: InfiniteScrollActivityView.defaultHeight)
                 loadingMoreView?.frame = frame
+                loadingMoreView?.center = self.view.center
                 loadingMoreView!.startAnimating()
                 
                 // Code to load more results
