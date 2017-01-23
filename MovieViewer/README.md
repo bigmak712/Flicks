@@ -42,7 +42,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 Describe any challenges encountered while building the app.
 
-    The biggest challenge was definitely writing the code to retrieve and load data from the Internet. Since I 
+   The biggest challenge was definitely writing the code to retrieve and load data from the Internet. Since I 
 had never done anything that required getting data from the Internet, writing and trying to understand the code
 was very difficult and time-consuming for me. Even after getting my app to work, I still don't fully understand
 how it works (but I shall continue to try).
