@@ -261,11 +261,18 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        
+       
+
         let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPath(for: cell)
+                let indexPath = tableView.indexPath(for: cell)
         let movie = movies![indexPath!.row]
         
+        cell.selectionStyle = .gray
+        
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.red
+        cell.selectedBackgroundView = backgroundView
+
         let detailViewController = segue.destination as! DetailViewController
         detailViewController.movie = movie
         
