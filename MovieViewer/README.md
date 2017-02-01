@@ -95,7 +95,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/55yymC1.gif' title='Flicks(Modified) Demo' width='' alt='Flicks(Modified) Demo' />
+<img src='http://i.imgur.com/55yymC1.gif' title='flicksModifiedDemo1' width='' alt='flicksModifiedDemo1' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
