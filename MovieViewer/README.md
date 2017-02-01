@@ -103,6 +103,9 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 Describe any challenges encountered while building the app.
 
+I didn't encounter any difficulties since I was mostly just following the videos. I'll probably come across 
+more challenges as I add extra functionalities.
+
 ## License
 
     Copyright [2017] [Timothy Mak]
