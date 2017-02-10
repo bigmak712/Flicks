@@ -159,7 +159,9 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                 // ... Use the new data to update the data source ...
                 if let responseDictionary = try! JSONSerialization.jsonObject(                                                                                with: responseData, options:[]) as? NSDictionary {
                     
-                    assert((self.movies != nil))
+                    if(self.movies == nil){
+                        self.movies = []
+                    }
                     
                     // Get the 'response' field
                     let responseFieldDictionary = responseDictionary["response"] as? NSDictionary
@@ -264,7 +266,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
        
 
         let cell = sender as! UITableViewCell
-                let indexPath = tableView.indexPath(for: cell)
+        let indexPath = tableView.indexPath(for: cell)
         let movie = movies![indexPath!.row]
         
         cell.selectionStyle = .gray
